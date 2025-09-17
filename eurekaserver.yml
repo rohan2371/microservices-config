@@ -1,6 +1,15 @@
 server:
   port: 8070
 
+
+spring:
+  application:
+    name: "eurekaserver"
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+
 eureka:
   instance:
     hostname: localhost
