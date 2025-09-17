@@ -1,6 +1,14 @@
 server:
   port: 8072
 
+spring:
+  application:
+    name: "gatewayserver"
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+
 eureka:
   instance:
     preferIpAddress: true
