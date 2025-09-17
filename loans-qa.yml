@@ -1,6 +1,14 @@
 build:
   version: "2.0"
 
+spring:
+  application:
+    name: "loans"
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+
 loans:
   message: "Welcome to EazyBank loans related QA APIs "
   contactDetails:
