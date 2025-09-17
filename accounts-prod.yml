@@ -1,6 +1,10 @@
 build:
   version: "1.0"
 
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+
 accounts:
   message: "Hey, welcome to EazyBank accounts related prod APIs - 4"
   contactDetails:
